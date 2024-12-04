@@ -7,7 +7,7 @@ from scipy.optimize import minimize
 #%%
 
 '''
-First example 
+First example w/ no kra
 '''
 
 F = 100
@@ -76,6 +76,10 @@ else:
 
 # %%
 
+'''
+Toll at Malacca Case
+'''
+
 # change one variable, i.e. reduce tolls at malacca to see how the ships change direction 
 
 Ts = np.linspace(-1000, 100, 1000)
@@ -96,6 +100,10 @@ for toll in Ts:
     results.append(result.x)
 
 #%%
+
+'''
+Changing Congestion Constant at Malacca
+'''
 
 Mcs = np.linspace(0, 100, 1000)
 toll = 0
