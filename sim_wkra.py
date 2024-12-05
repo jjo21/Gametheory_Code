@@ -87,6 +87,16 @@ if result.success:
 else:
     print("Optimization failed.")
 
+kra_cost = I2b + Kb + d_eq * Kc + T
+malacca_cost = I2b + Mb + (b_eq - d_eq) * Mc
+sundra_cost = I1b + Sb + (a_eq - c_eq) * Sc
+lombok_cost = I1b + Lb + Lc * c_eq
+
+print(f"Cost at Kra: {kra_cost}")
+print(f"Cost at Malacca: {malacca_cost}")
+print(f"Cost at Sundra: {sundra_cost}")
+print(f"Cost at Lombok: {lombok_cost}")
+
 # %%
 
 '''
