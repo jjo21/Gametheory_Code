@@ -160,3 +160,12 @@ else:
     print("Optimization failed.")
 
 # %%
+
+input_file = r'C:\Users\owjoh\Desktop\clare.txt'
+
+with open(input_file, "r") as file:
+    single_string = file.read().replace("\n", "")  # Remove line breaks
+
+print(single_string[4346:])
+
+# %%

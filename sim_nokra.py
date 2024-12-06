@@ -12,7 +12,7 @@ First example w/ no kra
 
 F = 100
 
-I1b = 10 # Initial 1 Base Cost
+I1b = 1744.31 # Initial 1 Base Cost
 
 Mb = 10 # Malacca Base 
 Mc = 30 # Malacca Congestion 
