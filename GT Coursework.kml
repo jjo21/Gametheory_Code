@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>GT Coursework</name>
+	<gx:CascadingStyle kml:id="__managed_style_0D3B6E4E4D34D12878D0">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_13D155BB0834D12878CF">
+		<styleUrl>https://earth.google.com/balloon_components/base/1.0.26.0/none_template.kml#main</styleUrl>
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_091E89596634D12878CF">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_13D155BB0834D12878CF</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_0D3B6E4E4D34D12878D0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<gx:CascadingStyle kml:id="__managed_style_05573DF8D234D1250DC4">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_04B947AF6434D1250DC0">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>2</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_001F5F3DA834D1250DBF">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_04B947AF6434D1250DC0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_05573DF8D234D1250DC4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="05E3935B8D34D1250DBB">
+		<name>Initial 1</name>
+		<LookAt>
+			<longitude>89.15473142026011</longitude>
+			<latitude>11.29107418608771</latitude>
+			<altitude>-4692.706520454169</altitude>
+			<heading>2.503514653030945</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>6019196.321881414</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001F5F3DA834D1250DBF</styleUrl>
+		<LineString>
+			<coordinates>
+				80.29399389976027,13.08624566149969,0 80.29880229441534,13.09209984814122,0 80.30404246869313,13.10393068802708,0 80.31006504058124,13.10859875513721,0 95.55702225507821,8.549523672277482,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="0D8782AD7F34D1266B3A">
+		<name>Kra</name>
+		<LookAt>
+			<longitude>102.1642075009389</longitude>
+			<latitude>8.543706544201596</latitude>
+			<altitude>831.5121502241478</altitude>
+			<heading>2.503514652862744</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>3625978.892050982</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001F5F3DA834D1250DBF</styleUrl>
+		<LineString>
+			<coordinates>
+				95.55729182647022,8.549185091208052,0 98.22307324154754,9.383991530497406,0 99.45970702566694,10.21136531287574,0 99.97871647222105,10.18206097257882,0 105.2912282024908,8.178517832300688,0 106.8676244061535,8.638923842157158,0 106.9832778983364,10.4162414526828,0 106.9679525981499,10.41915458083688,0 106.9655967515615,10.41628476856444,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="03DCA8308334D127F662">
+		<name>Malacca</name>
+		<LookAt>
+			<longitude>100.9799642881335</longitude>
+			<latitude>6.625827638158527</latitude>
+			<altitude>-655.9523923423775</altitude>
+			<heading>7.329795862059561e-07</heading>
+			<tilt>20.39954429893787</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>3522414.192684889</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_091E89596634D12878CF</styleUrl>
+		<LineString>
+			<coordinates>
+				95.55903926607644,8.550720754434288,0 101.4146484011152,2.425797574988717,0 103.6363286934467,1.145479325464637,0 104.3581951703461,1.356416227166975,0 105.8791597788286,5.511626454398897,0 106.8716960476278,8.639818344404267,0 106.9833004020775,10.41595810512487,0 106.9682014759553,10.41924647838192,0 106.9657232981178,10.41630066568215,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="0B76DB4EF934D12BE250">
+		<name>Initial 2</name>
+		<LookAt>
+			<longitude>91.79950486389181</longitude>
+			<latitude>2.409748545681417</latitude>
+			<altitude>-4723.253102228291</altitude>
+			<heading>0.338639915605622</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>7560619.504151344</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001F5F3DA834D1250DBF</styleUrl>
+		<LineString>
+			<coordinates>
+				80.29405081766849,13.08627782275146,0 80.29883066131931,13.09213214167956,0 80.30405002538501,13.10389909103624,0 80.31007450601672,13.10861385920218,0 80.31166702541725,13.10815135454222,0 103.6518601443196,-6.943515188911168,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="0C3123EB6B34D12D524E">
+		<name>Sunda</name>
+		<LookAt>
+			<longitude>102.4873434260563</longitude>
+			<latitude>3.665282539620983</latitude>
+			<altitude>-740.9898542424913</altitude>
+			<heading>0.3386399099315442</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>4498129.198152424</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001F5F3DA834D1250DBF</styleUrl>
+		<LineString>
+			<coordinates>
+				103.6527911950471,-6.942393537980758,0 105.6440241486491,-6.171970371917473,0 106.2222991164141,-5.223190593633479,0 106.9880376620661,-2.97487547504918,0 106.8547803432058,-2.304998919820895,0 106.562095815509,1.293014667082027,0 107.2366159116925,8.412981474722475,0 106.9832687958705,10.41609165682472,0 106.9680682011984,10.41907892759082,0 106.9656443014147,10.41629534713444,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<Placemark id="01C079C1CE34D1305D27">
+		<name>Lombok</name>
+		<LookAt>
+			<longitude>111.2434939910277</longitude>
+			<latitude>2.419047785885537</latitude>
+			<altitude>-1836.163751965433</altitude>
+			<heading>356.3236850647729</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>5935506.168469191</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_001F5F3DA834D1250DBF</styleUrl>
+		<LineString>
+			<coordinates>
+				103.6547451498533,-6.943604594266748,0 107.3466592655891,-7.87728171849213,0 115.5703236411234,-9.305308089347927,0 115.9359553792483,-8.147201998911045,0 116.7690204108847,-5.75166220829798,0 116.9068601746969,-4.903753361388235,0 118.2833467689221,-2.647566713771612,0 119.429525699478,2.288404957343824,0 119.7090881704259,4.783158712225299,0 119.1110470274497,6.451558134552581,0 118.1420609220684,7.972778685815309,0 116.7925695612082,7.633052271148261,0 113.2544440338976,8.65865390697051,0 109.9540585530237,8.962059869644593,0 107.0797335740315,10.30931828082971,0 106.983024604557,10.41608247817873,0 106.9683304748101,10.41894119675551,0 106.9656895488717,10.41634220131243,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+</Document>
+</kml>
