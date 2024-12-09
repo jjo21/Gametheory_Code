@@ -91,10 +91,10 @@ average_costs_equi = []
 results_soci = []
 average_costs_soci = []
 
-congestions = np.linspace(1, 30, 100)
+congestions = np.linspace(-19, 10, 100)
 
 for cong in congestions: 
-    A = np.diag([1, 1, 5, 3, 1.5, cong])
+    A = np.diag([1, 1, 5, 3, 1.5, 20 + cong])
     x_equi = of.shipping_analysis(A, b, M, kra=True, eq=True, flag=False)
     x_soci = of.shipping_analysis(A, b, M, kra=True, eq=False, flag=False)
     
@@ -144,16 +144,16 @@ plt.show()
 
 # plot contour plot for POA
 
-congestions = np.linspace(1, 30, 10)
+congestions = np.linspace(-19, 10, 10)
 tolls = np.linspace(-100, 100, 10)
 M = 100
 
 X, Y = np.meshgrid(congestions, tolls)
 Z = np.zeros((len(congestions), len(tolls)))
 
-for i, width in enumerate(congestions):
+for i, cong in enumerate(congestions):
     for j, toll in enumerate(tolls):
-        A = np.diag([1, 1, 5, 3, 1.5, width])
+        A = np.diag([1, 1, 5, 3, 1.5, 20 + cong])
         b = np.array([12, 23, 16, 14, 32, 10 + toll])
         POA_value = of.POA(A, b, M)
         Z[i, j] = POA_value
