@@ -133,21 +133,18 @@ def POA(A, b, M):
     Calculate Price of Anarchy of the congestion network.
     ===
     Inputs:
-    x_bar (numpy.ndarray):   Flow of system in equilibrium state.
-    x_tilde (numpy.ndarray): Flow of system in social optimum.
+    A (numpy.ndarray) : Congestion gradient coefficients of cost functions in a
+                        2D matrix. Must be a diagonal matrix.
+    b (numpy.ndarray) : Constant coefficients of cost functions in a 1D vector.
+    M (numbers.Number): Total mass in the network.
     ---
     Outputs:
     c (numpy.ndarray): Average cost per single user of network.
     ===
     """
 
-    x_bar = shipping_analysis(A, b, M, kra=False, eq=True, flag=False)
-    x_tilde = shipping_analysis(A, b, M, kra=False, eq=False, flag=False)
-    print(x_bar)
-    print(x_tilde)
-
-    # if x_bar.shape != x_tilde.shape:
-    #     raise ValueError("x_bar and x_tilde must be vectors of the same size.")
+    x_bar = shipping_analysis(A, b, M, kra=True, eq=True, flag=False)
+    x_tilde = shipping_analysis(A, b, M, kra=True, eq=False, flag=False)
     return average_cost(x_bar, A, b, M)/average_cost(x_tilde, A, b, M)
 
 #%%
@@ -157,9 +154,6 @@ A = np.diag([1, 1, 5, 3, 1.5, 20])
 b = np.array([12, 23, 16, 14, 32, 10])
 M = 100
 x = shipping_analysis(A, b, M, kra=False, eq=False, flag=True)
-print(x[2] * A[2, 2] + b[2] + x[0] + b[0])
-print(x[3] * A[3, 3] + b[3] + x[1] + b[1])
-print(x[4] * A[4, 4] + b[4] + x[1] + b[1])
 print(route_cost(x, A, b))
 print(average_cost(x, A, b, M))
 POA(A, b, M)
@@ -177,7 +171,7 @@ average_costs_equi = []
 results_soci = []
 average_costs_soci = []
 
-tolls = np.linspace(-50, 50, 100)
+tolls = np.linspace(-100, 100, 200)
 
 for toll in tolls: 
     b = np.array([12, 23, 16, 14, 32, 10 + toll])
@@ -193,14 +187,9 @@ for toll in tolls:
 results_equi = np.array(results_equi)
 results_soci = np.array(results_soci)
 
-# generate 2 plots side by side 
-
 fig, axs = plt.subplots(1, 2, figsize=(12, 6), sharex=True)
 fig.suptitle('Toll Factor Analysis with Kra Canal', fontsize=16)
 
-# share an x axis
-
-# plot 1
 axs[0].plot(tolls, results_equi[:, 2], label='Malacca', color='blue')
 axs[0].plot(tolls, results_equi[:, 3], label='Sundra', color='orange')
 axs[0].plot(tolls, results_equi[:, 4], label='Lombok', color='green')
@@ -215,7 +204,6 @@ axs[0].grid()
 axs[0].set_xlabel('Toll Factor ($\omega$)', fontsize=14)
 axs[0].set_ylabel('Flow', fontsize=14)
 
-# plot 2
 axs[1].plot(tolls, average_costs_equi, label='Equilibrium')
 axs[1].plot(tolls, average_costs_soci, label='Social Optimum')
 axs[1].set_xlabel('Toll Factor ($\omega$)', fontsize=14)
@@ -226,12 +214,19 @@ axs[1].grid()
 plt.tight_layout()
 plt.show()
 
+plt.plot(tolls, np.array(average_costs_equi) - np.array(average_costs_soci))
+plt.xlabel('Toll Factor ($\omega$)', fontsize=14)
+plt.ylabel('Difference in Average Cost', fontsize=14)
+plt.grid()
+plt.show()
+
 # %%
 
 '''
 Changing congestion value at Kra
 '''
-b = np.array([12, 23, 16, 14, 32, 10 + toll])
+
+b = np.array([12, 23, 16, 14, 32, 10])
 M = 100
 
 results_equi = []
@@ -239,7 +234,7 @@ average_costs_equi = []
 results_soci = []
 average_costs_soci = []
 
-widths = np.linspace(1, 10, 100)
+widths = np.linspace(1, 30, 100)
 
 for width in widths: 
     A = np.diag([1, 1, 5, 3, 1.5, width])
@@ -255,14 +250,9 @@ for width in widths:
 results_equi = np.array(results_equi)
 results_soci = np.array(results_soci)
 
-# generate 2 plots side by side 
-
 fig, axs = plt.subplots(1, 2, figsize=(12, 6), sharex=True)
 fig.suptitle('Congestion Factor Analysis with Kra Canal', fontsize=16)
 
-# share an x axis
-
-# plot 1
 axs[0].plot(widths, results_equi[:, 2], label='Malacca', color='blue')
 axs[0].plot(widths, results_equi[:, 3], label='Sundra', color='orange')
 axs[0].plot(widths, results_equi[:, 4], label='Lombok', color='green')
@@ -277,7 +267,6 @@ axs[0].grid()
 axs[0].set_xlabel('Congestion Factor ($\gamma$)', fontsize=14)
 axs[0].set_ylabel('Flow', fontsize=14)
 
-# plot 2
 axs[1].plot(widths, average_costs_equi, label='Equilibrium')
 axs[1].plot(widths, average_costs_soci, label='Social Optimum')
 axs[1].set_xlabel('Congestion Factor ($\gamma$)', fontsize=14)
@@ -288,14 +277,19 @@ axs[1].grid()
 plt.tight_layout()
 plt.show()
 
+plt.plot(widths, np.array(average_costs_equi) - np.array(average_costs_soci))
+plt.xlabel('Congestion Factor ($\gamma$)', fontsize=14)
+plt.ylabel('Difference in Average Cost', fontsize=14)
+plt.grid()
+plt.show()
+
 # %%
 
-# plot contour plot for 
+# plot contour plot for POA
 
-widths = np.linspace(1, 10, 100)
-tolls = np.linspace(-50, 50, 100)
-
-# plot the contour plot and find the minimum of this function, using meshgrid
+widths = np.linspace(1, 30, 100)
+tolls = np.linspace(-100, 100, 100)
+M = 100
 
 X, Y = np.meshgrid(widths, tolls)
 Z = np.zeros((len(widths), len(tolls)))
@@ -304,14 +298,16 @@ for i, width in enumerate(widths):
     for j, toll in enumerate(tolls):
         A = np.diag([1, 1, 5, 3, 1.5, width])
         b = np.array([12, 23, 16, 14, 32, 10 + toll])
-        x = shipping_analysis(A, b, M, kra=True, eq=True, flag=False)
-        Z[i, j] = average_cost(x, A, b, M)
+        POA_value = POA(A, b, M)
+        Z[i, j] = POA_value
+
+#%%
 
 fig, ax = plt.subplots(figsize=(8, 8))
 c = ax.contourf(X, Y, Z, levels=20)
 fig.colorbar(c)
-ax.set_xlabel('Width')
-ax.set_ylabel('Toll')
+ax.set_xlabel('Width', fontsize=14)
+ax.set_ylabel('Toll', fontsize=14)
 plt.show()
 
 # %%
